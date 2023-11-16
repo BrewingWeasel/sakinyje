@@ -25,6 +25,7 @@ spacy-parsing = { path = "../spacy-parsing" }
 toml = "0.8.2"
 dirs = "5.0.1"
 chrono = { version = "0.4.31", features = ["serde"] }
+select = "0.6.0"
 
 
 [features]
