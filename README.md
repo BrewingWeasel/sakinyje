@@ -43,12 +43,26 @@ Sakinyje is a tool for language learning based on the idea of [sentence mining](
   - training custom models for other languages or improving the models of existing languages (see https://spacy.io/usage/training for training instructions and https://universaldependencies.org/ for source data)
 
 ## Future plans: 
-- support for images as definitions (already kind of works with custom html, but it would be nice if it had a custom image picker)
-- show grammatical information of words (case, participle type, conjugation etc)
-- support for audio definitions
-- exporting specific definitions to specific fields for Anki
-- Non SpaCy based lemmatizer
-- Being able to import large files and read by sentence/chunk
+- check the issues tab
+
+## Installation
+
+### Use prebuilt binary
+You can find prebuilt binaries of the latest release (https://github.com/BrewingWeasel/sakinyje/releases)
+Note that currently the AppImage does not work, and the others are not tested
+
+### Build from source
+Dependencies (debian based):
+libgtk-3-dev libwebkit2gtk-4.0-dev libayatana-appindicator3-dev librsvg2-dev glibc-source libc6 python3-dev
+
+#### Using Just
+```sh
+git clone https://github.com/BrewingWeasel/sakinyje && cd sakinyje
+just build
+```
+You can also manually build using cargo-tauri with trunk and spacy.
+
+In either case, your final build will be in target/release/sakinyje, and the bundles will be in target/release/bundles
 
 ## Usage (WIP):
 ### First time setup:
@@ -62,14 +76,6 @@ Add a dictionary. Here are some suggestions:
 Copy or write a sentence into the reader tab, then press parse.
 Click on any word to get its definition.
 Click on the export button to export to Anki
-
-## Installation
-```sh
-git clone https://github.com/BrewingWeasel/sakinyje
-cd sakinyje
-cargo build --release
-```
-Python and SpaCy also need to be installed. If you are using a pre-trained model, you'll also need to install that.
 
 ## Name
 The name comes from the locative form of the Lithuanian word for sentence (sakinys).
